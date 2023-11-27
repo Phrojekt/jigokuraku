@@ -25,6 +25,7 @@ export default function RootLayout({
     <html lang="pt-br" suppressHydrationWarning={true}>
       <body className={`bg-black-wlight ${nanumBrushScript.variable}`}>
         <Navbar />
+        <div>{children}</div>
       </body>
     </html>
   )

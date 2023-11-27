@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import Logo from "../images/logo.png"
 import { HamburguerMenu } from "./Hamburger_Menu"
 
@@ -10,8 +11,8 @@ export function Navbar() {
             </div>
             <HamburguerMenu/>
             <div className="hidden md:flex gap-x-5 text-light-gray text-4xl font-alt ">
-                <a href="#" className="hover:-translate-y-2">Resumo</a>
-                <a href="#" className="hover:-translate-y-2">Personagens</a>
+                <Link href="/" className="hover:-translate-y-2">Resumo</Link>
+                <Link href="/characters" className="hover:-translate-y-2">Personagens</Link>
             </div>
 
         </header>
