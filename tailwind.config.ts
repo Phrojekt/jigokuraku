@@ -12,6 +12,16 @@ const config: Config = {
         alt: 'var(--NanumBrush)',
       },
 
+      screens: {
+        sm: '300px',
+
+        md: '769px',
+
+        lg: '990px',
+
+        xl: '1280px',
+      },
+
       colors: {
         'black-wlight': '#000000',
         'gradient-h-gray': "#0b0a0aa6",
