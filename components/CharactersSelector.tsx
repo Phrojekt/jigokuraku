@@ -1,15 +1,18 @@
 import Image from "next/image";
 import { useState } from "react";
 
+type CharactersSelectorProps  = { 
+    handleSetArray: (id:number) => void
+}
 
-export function CharactersSelector() {
+export function CharactersSelector({handleSetArray}: CharactersSelectorProps) {
     return ( 
         <div className="flex flex-row sm:flex-nowrap md:flex-wrap gap-4 w-[100%]">
                         <div className="">
-                            <Image src="/images/Gabimaru.png" alt="Gabimaru Icon" width={500} height={100} quality={100} className="sm:w-[40%] md:w-[100px] md:hover:-translate-y-2 md:hover:scale-110 h-auto rounded-3xl cursor-pointer" />
+                            <Image src="/images/Gabimaru.png" alt="Gabimaru Icon" width={500} height={100} quality={100} className="sm:w-[40%] md:w-[100px] md:hover:-translate-y-2 md:hover:scale-110 h-auto rounded-3xl cursor-pointer" role="button" onClick={() => handleSetArray(0)}/>
                         </div>
                         <div>
-                            <Image src="/images/YamadaSagiri.png" alt="Sagiri Icon" width={500} height={100} quality={100} className="sm:w-[40px] md:w-[100px]  md:hover:-translate-y-2 md:hover:scale-110 h-auto rounded-3xl cursor-pointer" />
+                            <Image src="/images/YamadaSagiri.png" alt="Sagiri Icon" width={500} height={100} quality={100} className="sm:w-[40px] md:w-[100px]  md:hover:-translate-y-2 md:hover:scale-110 h-auto rounded-3xl cursor-pointer" role="button" onClick={() => handleSetArray(1)} />
                         </div>
                         <div>
                             <Image src="/images/Nurugai.png" alt="Nurugai Icon" width={500} height={100}  quality={100} className="sm:w-[40px] md:w-[100px] md:hover:-translate-y-2 md:hover:scale-110 h-auto rounded-3xl cursor-pointer" />
