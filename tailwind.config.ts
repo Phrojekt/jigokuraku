@@ -27,6 +27,7 @@ const config: Config = {
         'gradient-h-gray': "#0b0a0aa6",
         'gradient-l-gray': '#100e0e00',
         'light-gray': '#D4D4D4',
+        'text-gray': '#BABABA',
         'dark-gray': '#121212',
       },
     },
