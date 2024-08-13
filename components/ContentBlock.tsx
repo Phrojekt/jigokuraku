@@ -11,7 +11,7 @@ export function ContentBlock({title, description, description2}: ContentBlockPro
 
     return (
         <div className="flex sm:flex-wrap">
-            <div className="bg-light-gray sm:w-[100%] md:w-80 md:h-[850px] sm:rounded-t-3xl md:rounded-3xl md:rounded-r-none pl-8 pt-6 space-y-8">
+            <div className="bg-light-gray sm:w-[100%] md:w-80 sm:h-fit md:h-[850px] sm:rounded-t-3xl md:rounded-3xl md:rounded-r-none pl-8 pt-6 space-y-8">
                 <h2 className="text-black text-5xl font-alt">{title}</h2>
                 <div className="text-black sm:text-xs md:text-base" >{description} <br /> {description2}</div>
             </div>
