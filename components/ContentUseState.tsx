@@ -28,8 +28,8 @@ export function ContentUseState() {
 
     return(
         <>
-            <div className="flex sm:flex-col sm:gap-y-10 md:flex-row w-[100%] h-full justify-center pl-[15%] pr-[15%] pt-[3%] gap-x-5">
-                <div className="relative sm:w-[100%] md:w-[30%] sm:h-[50px] md:h-auto flex flex-col justify-start sm:overflow-x-auto md:place-content-center ">
+            <div className="flex sm:flex-col sm:gap-y-10 md:flex-row w-[100%] h-full justify-center sm:pl-[5%] sm:pr-[5%] md:pl-[15%] md:pr-[15%] pt-[3%] pb-[10%] gap-x-5">
+                <div className="relative sm:w-[100%] md:w-[30%] sm:h-[80px] md:h-auto flex flex-col justify-start sm:overflow-x-auto md:place-content-center ">
                     <CharactersSelector handleSetArray={handleSetArray} />
                 </div>
                 <div>
