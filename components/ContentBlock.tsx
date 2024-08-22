@@ -1,13 +1,14 @@
 'use client'
-import { useState } from "react"
+import Image from "next/image";
 
 type ContentBlockProps = {
     title: string
     description: string
     description2?: string
+    url?: string
 }
 
-export function ContentBlock({title, description, description2}: ContentBlockProps) {
+export function ContentBlock({title, description, description2, url}: ContentBlockProps) {
 
     return (
         <div className="flex sm:flex-col sm:flex-col-reverse md:flex-row">
@@ -15,7 +16,12 @@ export function ContentBlock({title, description, description2}: ContentBlockPro
                 <h2 className="text-black text-5xl font-alt">{title}</h2>
                 <div className="text-black sm:text-xs md:text-base" >{description} <br /> {description2}</div>
             </div>
-            <div className="bg-dark-gray sm:w-40 sm:w-[100%] sm:h-[208px] sm:rounded-t-3xl sm:rounded-tl-3xl sm:rounded-b-none md:w-80 md:h-[850px] md:rounded-3xl md:rounded-l-none"></div>
+            <div className="bg-dark-gray sm:w-40 sm:w-[100%] sm:h-[208px] sm:rounded-t-3xl sm:rounded-tl-3xl sm:rounded-b-none md:w-80 md:h-[850px] md:rounded-3xl md:rounded-l-none flex sm:flex-col md:flex-col-reverse overflow-hidden">
+                {url && (
+                    <Image 
+                    src={url} alt="aiai" width={500} height={500} quality={100} className=" md:w-[380px] sm:relative sm:top-[-70px] sm:left-[60px]" />
+                )}
+            </div>
         </div>
     ) }
 export default ContentBlock;
